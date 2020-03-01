@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F54E80C240BF33000C6388E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F54E80B240BF33000C6388E /* MainNavigationController.swift */; };
+		4F54E812240BFC2900C6388E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F54E811240BFC2900C6388E /* NavigationBar.swift */; };
 		4FD20277240BE6E0005A699B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20276240BE6E0005A699B /* AppDelegate.swift */; };
 		4FD20279240BE6E0005A699B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20278240BE6E0005A699B /* SceneDelegate.swift */; };
 		4FD2027B240BE6E0005A699B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2027A240BE6E0005A699B /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F54E80B240BF33000C6388E /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		4F54E811240BFC2900C6388E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		4FD20273240BE6E0005A699B /* InstagramDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD20276240BE6E0005A699B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD20278240BE6E0005A699B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F54E80D240BFA6700C6388E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4F54E80E240BFA6E00C6388E /* NavigationBar */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4F54E80E240BFA6E00C6388E /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				4F54E811240BFC2900C6388E /* NavigationBar.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
 		4FD2026A240BE6E0005A699B = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +119,7 @@
 		4FD20275240BE6E0005A699B /* InstagramDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4F54E80D240BFA6700C6388E /* Common */,
 				4FD20276240BE6E0005A699B /* AppDelegate.swift */,
 				4FD20278240BE6E0005A699B /* SceneDelegate.swift */,
 				4FD2027A240BE6E0005A699B /* ViewController.swift */,
@@ -106,6 +127,7 @@
 				4FD2027F240BE6E8005A699B /* Assets.xcassets */,
 				4FD20281240BE6E8005A699B /* LaunchScreen.storyboard */,
 				4FD20284240BE6E8005A699B /* Info.plist */,
+				4F54E80B240BF33000C6388E /* MainNavigationController.swift */,
 			);
 			path = InstagramDemo;
 			sourceTree = "<group>";
@@ -259,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F54E812240BFC2900C6388E /* NavigationBar.swift in Sources */,
+				4F54E80C240BF33000C6388E /* MainNavigationController.swift in Sources */,
 				4FD2027B240BE6E0005A699B /* ViewController.swift in Sources */,
 				4FD20277240BE6E0005A699B /* AppDelegate.swift in Sources */,
 				4FD20279240BE6E0005A699B /* SceneDelegate.swift in Sources */,
