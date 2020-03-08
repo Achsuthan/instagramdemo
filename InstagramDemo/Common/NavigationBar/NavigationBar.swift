@@ -10,6 +10,12 @@ import UIKit
 
 class NavigationBar: UIView {
     
+    var lineView : LineView = {
+        let view = LineView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     var backView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +62,6 @@ class NavigationBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.heightAnchor.constraint(equalToConstant: 65).isActive = true
         self.setUp()
     }
     
@@ -65,6 +70,15 @@ class NavigationBar: UIView {
         self.setUpTitleView()
         self.setUpMoreView()
         self.setUpMessageBadgeView()
+        self.setUpBottomLine()
+    }
+    
+    private func setUpBottomLine(){
+        self.addSubview(lineView)
+        self.lineView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        self.lineView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
     }
     
     private func setUpMessageBadgeView(){
