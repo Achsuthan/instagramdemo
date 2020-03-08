@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct RoundImageModel {
     var viewHeight: Int = 0
     var imageHeight: Int = 0
+    var borderColor: UIColor = UIColor.red
 }
