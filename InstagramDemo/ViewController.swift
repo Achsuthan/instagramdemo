@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         navBar.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
         navBar.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
         navBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
-        navBar.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        navBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
         self.setUpStoryView()
     }
     

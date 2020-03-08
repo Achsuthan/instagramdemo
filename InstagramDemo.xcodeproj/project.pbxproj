@@ -22,6 +22,7 @@
 		4F5760DD2413E38300EB09C0 /* SingleLargeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5760DC2413E38300EB09C0 /* SingleLargeImageView.swift */; };
 		4F9374B72414A6D900C12D30 /* StoryOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9374B62414A6D900C12D30 /* StoryOption.swift */; };
 		4F9374BA2414AACA00C12D30 /* TimeLineUserDetailsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9374B92414AACA00C12D30 /* TimeLineUserDetailsBar.swift */; };
+		4F9374BD2414E58E00C12D30 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9374BC2414E58E00C12D30 /* PostDetailsView.swift */; };
 		4FD20277240BE6E0005A699B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20276240BE6E0005A699B /* AppDelegate.swift */; };
 		4FD20279240BE6E0005A699B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20278240BE6E0005A699B /* SceneDelegate.swift */; };
 		4FD2027B240BE6E0005A699B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2027A240BE6E0005A699B /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		4F5760DC2413E38300EB09C0 /* SingleLargeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLargeImageView.swift; sourceTree = "<group>"; };
 		4F9374B62414A6D900C12D30 /* StoryOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryOption.swift; sourceTree = "<group>"; };
 		4F9374B92414AACA00C12D30 /* TimeLineUserDetailsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUserDetailsBar.swift; sourceTree = "<group>"; };
+		4F9374BC2414E58E00C12D30 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		4FD20273240BE6E0005A699B /* InstagramDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD20276240BE6E0005A699B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD20278240BE6E0005A699B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		4F54E80D240BFA6700C6388E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4F9374BB2414E57600C12D30 /* Post Details View */,
 				4F9374B82414AAB200C12D30 /* TimeLineUserDetailsBar */,
 				4F9374B52414A6C100C12D30 /* StoryOption */,
 				4F5760DB2413E36900EB09C0 /* SingleLargeImageView */,
@@ -221,6 +224,14 @@
 				4F9374B92414AACA00C12D30 /* TimeLineUserDetailsBar.swift */,
 			);
 			path = TimeLineUserDetailsBar;
+			sourceTree = "<group>";
+		};
+		4F9374BB2414E57600C12D30 /* Post Details View */ = {
+			isa = PBXGroup;
+			children = (
+				4F9374BC2414E58E00C12D30 /* PostDetailsView.swift */,
+			);
+			path = "Post Details View";
 			sourceTree = "<group>";
 		};
 		4FD2026A240BE6E0005A699B = {
@@ -426,6 +437,7 @@
 				4F5760D62413DE6C00EB09C0 /* SingleHomeTimeLine.swift in Sources */,
 				4F5760C82413CA7400EB09C0 /* SingleStory.swift in Sources */,
 				4F5760CC2413D9A800EB09C0 /* RoundImageView.swift in Sources */,
+				4F9374BD2414E58E00C12D30 /* PostDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

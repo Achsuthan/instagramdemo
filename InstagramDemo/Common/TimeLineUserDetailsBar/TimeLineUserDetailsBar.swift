@@ -28,9 +28,9 @@ class TimeLineUserDetailsBar: UIView {
     
     private func setUp(){
         self.addSubview(self.roundImageView)
-        let imageModel = RoundImageModel(viewHeight: 50, imageHeight: 45)
+        let imageModel = RoundImageModel(viewHeight: 50, imageHeight: 40, borderColor: .red)
         self.roundImageView.imageModel = imageModel
-        roundImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
+        roundImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
         roundImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
         roundImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         roundImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true

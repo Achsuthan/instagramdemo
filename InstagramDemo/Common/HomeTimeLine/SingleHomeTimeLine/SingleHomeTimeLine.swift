@@ -10,6 +10,8 @@ import UIKit
 
 class SingleHomeTimeLine: UICollectionViewCell {
     
+    
+    
     let timeLineuserDetails: TimeLineUserDetailsBar = {
         let view = TimeLineUserDetailsBar()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -36,6 +38,12 @@ class SingleHomeTimeLine: UICollectionViewCell {
     
     let storyOption: StoryOption = {
         let view = StoryOption()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let postDetails: PostDetailsView = {
+        let view = PostDetailsView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -79,6 +87,12 @@ class SingleHomeTimeLine: UICollectionViewCell {
         storyOption.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
         storyOption.topAnchor.constraint(equalTo: self.singleLargeImage.bottomAnchor, constant: 5).isActive = true
         storyOption.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        self.addSubview(postDetails)
+        postDetails.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+        postDetails.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        postDetails.topAnchor.constraint(equalTo: self.storyOption.bottomAnchor, constant: 5).isActive = true
+        postDetails.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10).isActive = true
+        
     }
-    
 }

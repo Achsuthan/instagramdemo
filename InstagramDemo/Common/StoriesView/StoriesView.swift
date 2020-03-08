@@ -16,7 +16,7 @@ class StoriesView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let view = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleStory", for: indexPath) as! SingleStory
         view.index = indexPath.row
-        view.name = "Story"
+        view.name = "Achsuthan Mahendran"
         
         return view
     }
