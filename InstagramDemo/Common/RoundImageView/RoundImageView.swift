@@ -56,7 +56,7 @@ class RoundImageView: UIView {
             view.layer.borderWidth = 0
         }
         view.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        view.layer.borderColor = UIColor.red.cgColor
+        view.layer.borderColor = (self.imageModel?.borderColor ?? UIColor.red).cgColor
         view.heightAnchor.constraint(equalToConstant: CGFloat(self.imageModel?.viewHeight ?? 0)).isActive = true
         view.widthAnchor.constraint(equalToConstant: CGFloat(self.imageModel?.viewHeight ?? 0)).isActive = true
         view.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
