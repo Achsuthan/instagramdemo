@@ -35,5 +35,35 @@
             </objects>
             <point key="canvasLocation" x="619" y="130"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="ViM-vj-NDW">
+            <objects>
+                <viewController restorationIdentifier="ProfileViewController" storyboardIdentifier="ProfileViewController" id="f1h-0U-Zng" customClass="ProfileViewController" customModule="InstagramDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ueQ-be-uhA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="EEe-Te-Zrc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7e-Jz-kON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324.6376811594205" y="134.59821428571428"/>
+        </scene>
+        <!--Likes View Controller-->
+        <scene sceneID="SOE-NT-Zqo">
+            <objects>
+                <viewController restorationIdentifier="LikesViewController" storyboardIdentifier="LikesViewController" id="Kja-gd-m9M" customClass="LikesViewController" customModule="InstagramDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a3v-f8-FDM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eiW-WT-yWV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gga-gF-eLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="142"/>
+        </scene>
     </scenes>
 </document>

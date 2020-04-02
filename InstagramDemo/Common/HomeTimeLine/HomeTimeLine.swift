@@ -15,6 +15,7 @@ class HomeTimeLine: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let view = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleHomeTimeLine", for: indexPath) as! SingleHomeTimeLine
+        view.navigation = self.naviagation
         return view
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -29,6 +30,8 @@ class HomeTimeLine: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    var naviagation: UINavigationController?
     
     
     private func setUp(){

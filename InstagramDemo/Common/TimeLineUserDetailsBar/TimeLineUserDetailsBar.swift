@@ -17,6 +17,7 @@ class TimeLineUserDetailsBar: UIView {
     }()
     
     
+    var navigation: UINavigationController?
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setUp()
@@ -34,6 +35,17 @@ class TimeLineUserDetailsBar: UIView {
         roundImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
         roundImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         roundImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        let profileButton = UIButton()
+        profileButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(profileButton)
+        
+        profileButton.heightAnchor.constraint(equalTo: self.roundImageView.heightAnchor, multiplier: 1).isActive = true
+        profileButton.widthAnchor.constraint(equalTo: self.roundImageView.widthAnchor, multiplier: 1).isActive = true
+        profileButton.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        
+        profileButton.addTarget(self, action: #selector(self.btProfile(_:)), for: .touchUpInside)
+        
         
         
         let moreImageView = UIImageView()
@@ -65,5 +77,12 @@ class TimeLineUserDetailsBar: UIView {
         textArea.trailingAnchor.constraint(equalTo: moreImageView.leadingAnchor, constant: -5).isActive = true
         textArea.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
         textArea.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+    }
+    
+    @IBAction func btProfile(_: Any){
+        print("Profile button clicked")
+        let storyBoard  = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyBoard.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
+        self.navigation?.pushViewController(view, animated: true)
     }
 }

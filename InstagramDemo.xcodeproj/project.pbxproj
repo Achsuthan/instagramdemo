@@ -20,9 +20,15 @@
 		4F5760D72413DE6C00EB09C0 /* SingleHomeTimeLine.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5760D52413DE6C00EB09C0 /* SingleHomeTimeLine.xib */; };
 		4F5760DA2413E1F000EB09C0 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5760D92413E1F000EB09C0 /* LineView.swift */; };
 		4F5760DD2413E38300EB09C0 /* SingleLargeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5760DC2413E38300EB09C0 /* SingleLargeImageView.swift */; };
+		4F890B7B2434DC5E0014B3E4 /* ProfileHeighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F890B792434DC5E0014B3E4 /* ProfileHeighlights.swift */; };
+		4F890B7C2434DC5E0014B3E4 /* ProfileHeighlights.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F890B7A2434DC5E0014B3E4 /* ProfileHeighlights.xib */; };
 		4F9374B72414A6D900C12D30 /* StoryOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9374B62414A6D900C12D30 /* StoryOption.swift */; };
 		4F9374BA2414AACA00C12D30 /* TimeLineUserDetailsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9374B92414AACA00C12D30 /* TimeLineUserDetailsBar.swift */; };
 		4F9374BD2414E58E00C12D30 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9374BC2414E58E00C12D30 /* PostDetailsView.swift */; };
+		4FA50FF22435B9FB007C1BBD /* ProfileInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA50FF12435B9FB007C1BBD /* ProfileInformationView.swift */; };
+		4FA50FF42435C7CB007C1BBD /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA50FF32435C7CB007C1BBD /* LikesViewController.swift */; };
+		4FA50FF82435D01F007C1BBD /* LikeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA50FF62435D01F007C1BBD /* LikeDetails.swift */; };
+		4FA50FF92435D01F007C1BBD /* LikeDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA50FF72435D01F007C1BBD /* LikeDetails.xib */; };
 		4FD20277240BE6E0005A699B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20276240BE6E0005A699B /* AppDelegate.swift */; };
 		4FD20279240BE6E0005A699B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20278240BE6E0005A699B /* SceneDelegate.swift */; };
 		4FD2027B240BE6E0005A699B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2027A240BE6E0005A699B /* ViewController.swift */; };
@@ -31,6 +37,9 @@
 		4FD20283240BE6E8005A699B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD20281240BE6E8005A699B /* LaunchScreen.storyboard */; };
 		4FD2028E240BE6E9005A699B /* InstagramDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2028D240BE6E9005A699B /* InstagramDemoTests.swift */; };
 		4FD20299240BE6E9005A699B /* InstagramDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20298240BE6E9005A699B /* InstagramDemoUITests.swift */; };
+		4FD3117A2415F09F00363950 /* ProfileNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD311792415F09F00363950 /* ProfileNavBar.swift */; };
+		4FE27F302415F1F5007A6540 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE27F2F2415F1F5007A6540 /* ProfileViewController.swift */; };
+		4FE27F332415F865007A6540 /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE27F322415F865007A6540 /* ProfileDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +73,15 @@
 		4F5760D52413DE6C00EB09C0 /* SingleHomeTimeLine.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleHomeTimeLine.xib; sourceTree = "<group>"; };
 		4F5760D92413E1F000EB09C0 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		4F5760DC2413E38300EB09C0 /* SingleLargeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLargeImageView.swift; sourceTree = "<group>"; };
+		4F890B792434DC5E0014B3E4 /* ProfileHeighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeighlights.swift; sourceTree = "<group>"; };
+		4F890B7A2434DC5E0014B3E4 /* ProfileHeighlights.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeighlights.xib; sourceTree = "<group>"; };
 		4F9374B62414A6D900C12D30 /* StoryOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryOption.swift; sourceTree = "<group>"; };
 		4F9374B92414AACA00C12D30 /* TimeLineUserDetailsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUserDetailsBar.swift; sourceTree = "<group>"; };
 		4F9374BC2414E58E00C12D30 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		4FA50FF12435B9FB007C1BBD /* ProfileInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformationView.swift; sourceTree = "<group>"; };
+		4FA50FF32435C7CB007C1BBD /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
+		4FA50FF62435D01F007C1BBD /* LikeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDetails.swift; sourceTree = "<group>"; };
+		4FA50FF72435D01F007C1BBD /* LikeDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeDetails.xib; sourceTree = "<group>"; };
 		4FD20273240BE6E0005A699B /* InstagramDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD20276240BE6E0005A699B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD20278240BE6E0005A699B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +96,9 @@
 		4FD20294240BE6E9005A699B /* InstagramDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD20298240BE6E9005A699B /* InstagramDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramDemoUITests.swift; sourceTree = "<group>"; };
 		4FD2029A240BE6E9005A699B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD311792415F09F00363950 /* ProfileNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavBar.swift; sourceTree = "<group>"; };
+		4FE27F2F2415F1F5007A6540 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4FE27F322415F865007A6540 /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,8 @@
 		4F54E80D240BFA6700C6388E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4FA50FF52435D003007C1BBD /* LikeDetailsView */,
+				4FE27F312415F851007A6540 /* ProfileDetailsView */,
 				4F9374BB2414E57600C12D30 /* Post Details View */,
 				4F9374B82414AAB200C12D30 /* TimeLineUserDetailsBar */,
 				4F9374B52414A6C100C12D30 /* StoryOption */,
@@ -130,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				4F54E811240BFC2900C6388E /* NavigationBar.swift */,
+				4FD311792415F09F00363950 /* ProfileNavBar.swift */,
 			);
 			path = NavigationBar;
 			sourceTree = "<group>";
@@ -210,6 +231,15 @@
 			path = SingleLargeImageView;
 			sourceTree = "<group>";
 		};
+		4F890B782434DC310014B3E4 /* ProfileHeighlights */ = {
+			isa = PBXGroup;
+			children = (
+				4F890B792434DC5E0014B3E4 /* ProfileHeighlights.swift */,
+				4F890B7A2434DC5E0014B3E4 /* ProfileHeighlights.xib */,
+			);
+			path = ProfileHeighlights;
+			sourceTree = "<group>";
+		};
 		4F9374B52414A6C100C12D30 /* StoryOption */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +262,15 @@
 				4F9374BC2414E58E00C12D30 /* PostDetailsView.swift */,
 			);
 			path = "Post Details View";
+			sourceTree = "<group>";
+		};
+		4FA50FF52435D003007C1BBD /* LikeDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				4FA50FF62435D01F007C1BBD /* LikeDetails.swift */,
+				4FA50FF72435D01F007C1BBD /* LikeDetails.xib */,
+			);
+			path = LikeDetailsView;
 			sourceTree = "<group>";
 		};
 		4FD2026A240BE6E0005A699B = {
@@ -266,6 +305,8 @@
 				4FD20281240BE6E8005A699B /* LaunchScreen.storyboard */,
 				4FD20284240BE6E8005A699B /* Info.plist */,
 				4F54E80B240BF33000C6388E /* MainNavigationController.swift */,
+				4FE27F2F2415F1F5007A6540 /* ProfileViewController.swift */,
+				4FA50FF32435C7CB007C1BBD /* LikesViewController.swift */,
 			);
 			path = InstagramDemo;
 			sourceTree = "<group>";
@@ -286,6 +327,16 @@
 				4FD2029A240BE6E9005A699B /* Info.plist */,
 			);
 			path = InstagramDemoUITests;
+			sourceTree = "<group>";
+		};
+		4FE27F312415F851007A6540 /* ProfileDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				4F890B782434DC310014B3E4 /* ProfileHeighlights */,
+				4FE27F322415F865007A6540 /* ProfileDetailsView.swift */,
+				4FA50FF12435B9FB007C1BBD /* ProfileInformationView.swift */,
+			);
+			path = ProfileDetailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +443,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA50FF92435D01F007C1BBD /* LikeDetails.xib in Resources */,
+				4F890B7C2434DC5E0014B3E4 /* ProfileHeighlights.xib in Resources */,
 				4FD20283240BE6E8005A699B /* LaunchScreen.storyboard in Resources */,
 				4FD20280240BE6E8005A699B /* Assets.xcassets in Resources */,
 				4F5760D72413DE6C00EB09C0 /* SingleHomeTimeLine.xib in Resources */,
@@ -422,22 +475,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9374B72414A6D900C12D30 /* StoryOption.swift in Sources */,
+				4FE27F332415F865007A6540 /* ProfileDetailsView.swift in Sources */,
 				4F54E812240BFC2900C6388E /* NavigationBar.swift in Sources */,
 				4F54E80C240BF33000C6388E /* MainNavigationController.swift in Sources */,
 				4FD2027B240BE6E0005A699B /* ViewController.swift in Sources */,
 				4F5760C22413C53B00EB09C0 /* StoriesView.swift in Sources */,
 				4F5760DA2413E1F000EB09C0 /* LineView.swift in Sources */,
+				4FA50FF82435D01F007C1BBD /* LikeDetails.swift in Sources */,
 				4FD20277240BE6E0005A699B /* AppDelegate.swift in Sources */,
 				4F5760DD2413E38300EB09C0 /* SingleLargeImageView.swift in Sources */,
 				4F9374BA2414AACA00C12D30 /* TimeLineUserDetailsBar.swift in Sources */,
+				4FE27F302415F1F5007A6540 /* ProfileViewController.swift in Sources */,
+				4FA50FF22435B9FB007C1BBD /* ProfileInformationView.swift in Sources */,
 				4FD20279240BE6E0005A699B /* SceneDelegate.swift in Sources */,
+				4F890B7B2434DC5E0014B3E4 /* ProfileHeighlights.swift in Sources */,
 				4F5760D22413DD5F00EB09C0 /* HomeTimeLine.swift in Sources */,
 				4F5760CF2413DB4800EB09C0 /* RoundImageModel.swift in Sources */,
 				4F5760BF2413C28D00EB09C0 /* NotificationView.swift in Sources */,
+				4FD3117A2415F09F00363950 /* ProfileNavBar.swift in Sources */,
 				4F5760D62413DE6C00EB09C0 /* SingleHomeTimeLine.swift in Sources */,
 				4F5760C82413CA7400EB09C0 /* SingleStory.swift in Sources */,
 				4F5760CC2413D9A800EB09C0 /* RoundImageView.swift in Sources */,
 				4F9374BD2414E58E00C12D30 /* PostDetailsView.swift in Sources */,
+				4FA50FF42435C7CB007C1BBD /* LikesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

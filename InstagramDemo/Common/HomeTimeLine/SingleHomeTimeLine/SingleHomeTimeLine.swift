@@ -48,6 +48,12 @@ class SingleHomeTimeLine: UICollectionViewCell {
         return view
     }()
     
+    var navigation: UINavigationController? {
+        didSet{
+            timeLineuserDetails.navigation = navigation
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setUp()
@@ -82,6 +88,9 @@ class SingleHomeTimeLine: UICollectionViewCell {
         singleLargeImage.topAnchor.constraint(equalTo: self.lineView1.bottomAnchor, constant: 0).isActive = true
         singleLargeImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
+        let gesture  = UITapGestureRecognizer(target: self, action: #selector(self.btClickImage(_:)))
+        singleLargeImage.addGestureRecognizer(gesture)
+        
         self.addSubview(storyOption)
         storyOption.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         storyOption.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
@@ -94,5 +103,12 @@ class SingleHomeTimeLine: UICollectionViewCell {
         postDetails.topAnchor.constraint(equalTo: self.storyOption.bottomAnchor, constant: 5).isActive = true
         postDetails.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10).isActive = true
         
+    }
+    
+    @IBAction func btClickImage(_: Any){
+        print("Bt Image click action")
+        let storyBoard  = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyBoard.instantiateViewController(identifier: "LikesViewController") as! LikesViewController
+        self.navigation?.pushViewController(view, animated: true)
     }
 }

@@ -75,6 +75,10 @@ class ViewController: UIViewController {
         self.homeTimeLineView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         self.homeTimeLineView.topAnchor.constraint(equalTo: self.storyView.bottomAnchor).isActive = true
         self.homeTimeLineView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+        homeTimeLineView.naviagation = self.navigationController
+        
+        
     }
     
     
