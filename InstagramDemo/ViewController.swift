@@ -16,12 +16,6 @@ class ViewController: UIViewController {
         return nav
     }()
     
-    let storyView : StoriesView = {
-        let view = StoriesView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     let homeTimeLineView : HomeTimeLine = {
         let view = HomeTimeLine()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +41,7 @@ class ViewController: UIViewController {
             print("Landscape")
         } else {
             print("Portrait")
-           
+            
         }
     }
     
@@ -63,17 +57,10 @@ class ViewController: UIViewController {
     }
     
     private func setUpStoryView(){
-        self.view.addSubview(storyView)
-        self.storyView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 5).isActive = true
-        self.storyView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        self.storyView.topAnchor.constraint(equalTo: self.navBar.bottomAnchor).isActive = true
-        self.storyView.heightAnchor.constraint(equalToConstant: 85).isActive = true
-        
-        
         self.view.addSubview(homeTimeLineView)
         self.homeTimeLineView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 5).isActive = true
         self.homeTimeLineView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        self.homeTimeLineView.topAnchor.constraint(equalTo: self.storyView.bottomAnchor).isActive = true
+        self.homeTimeLineView.topAnchor.constraint(equalTo: self.navBar.bottomAnchor).isActive = true
         self.homeTimeLineView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         homeTimeLineView.naviagation = self.navigationController

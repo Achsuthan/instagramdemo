@@ -16,20 +16,42 @@ class HomeTimeLine: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let view = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleHomeTimeLine", for: indexPath) as! SingleHomeTimeLine
         view.navigation = self.naviagation
+        view.index = indexPath.row
         return view
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width, height: 400)
+        if(indexPath.row == 0){
+            return CGSize(width: self.frame.width, height: 80)
+        }
+        else {
+            return CGSize(width: self.frame.width, height: 400)
+        }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
         self.setUp()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    deinit {
+       NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    @objc func rotated() {
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            self.setUp()
+        } else {
+            print("Portrait")
+            self.setUp()
+        }
+    }
+
     
     var naviagation: UINavigationController?
     

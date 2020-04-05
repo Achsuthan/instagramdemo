@@ -26,7 +26,7 @@ class LikeDetails: UICollectionViewCell {
         let imageModel = RoundImageModel(viewHeight: 80, imageHeight: 70, borderColor: .red)
         self.roundImage.imageModel = imageModel
         self.roundImage.index = 1
-        roundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
+        roundImage.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 5).isActive = true
         roundImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
         roundImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
         roundImage.widthAnchor.constraint(equalToConstant: 80).isActive = true
@@ -38,7 +38,7 @@ class LikeDetails: UICollectionViewCell {
         followingView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         followingView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         followingView.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        followingView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        followingView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         followingView.backgroundColor = .blue
         followingView.layer.cornerRadius = 5
         followingView.layer.borderColor = UIColor.lightGray.cgColor

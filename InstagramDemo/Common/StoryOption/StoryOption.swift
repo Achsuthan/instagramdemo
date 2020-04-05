@@ -18,6 +18,8 @@ class StoryOption: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var navigation: UINavigationController?
+    
     private func setUp(){
         let loveImage  = UIImageView()
         loveImage.translatesAutoresizingMaskIntoConstraints = false
@@ -38,6 +40,9 @@ class StoryOption: UIView {
         commentImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
         commentImage.widthAnchor.constraint(equalToConstant: 40).isActive = true
         
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.btComment(_:)))
+        commentImage.addGestureRecognizer(gesture)
+        
         let shareImage  = UIImageView()
         shareImage.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(shareImage)
@@ -56,5 +61,12 @@ class StoryOption: UIView {
         saveStoryImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
         saveStoryImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
         saveStoryImage.widthAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    
+    @IBAction func btComment(_: Any){
+        print("Comment button clicked")
+        let storyBoard  = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyBoard.instantiateViewController(identifier: "CommentsViewController") as! CommentsViewController
+        self.navigation?.pushViewController(view, animated: true)
     }
 }

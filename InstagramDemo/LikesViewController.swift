@@ -19,7 +19,7 @@ class LikesViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width, height: 90)
+        return CGSize(width: self.collectionViewWidth, height: 90)
     }
     
     
@@ -42,9 +42,40 @@ class LikesViewController: UIViewController, UICollectionViewDataSource, UIColle
         return line
     }()
     
+    var collectionViewWidth = CGFloat(0.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+        self.collectionViewWidth = self.view.frame.width
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            self.collectionViewWidth = self.view.frame.width - 80
+            
+//            self.setUp()
+        } else {
+            print("Portrait")
+            self.collectionViewWidth = self.view.frame.width
+//            self.setUp()
+        }
         self.setUp()
+    }
+    
+    deinit {
+       NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    @objc func rotated() {
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            self.collectionViewWidth = self.view.frame.width - 80
+            
+            self.setUp()
+        } else {
+            print("Portrait")
+            self.collectionViewWidth = self.view.frame.width
+            self.setUp()
+        }
     }
     
     private func setUp(){
@@ -60,13 +91,13 @@ class LikesViewController: UIViewController, UICollectionViewDataSource, UIColle
         //Line View
         self.view.addSubview(self.lineView)
         self.lineView.topAnchor.constraint(equalTo: self.profileNavigation.bottomAnchor).isActive  = true
-        self.lineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        self.lineView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.lineView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        self.lineView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         self.lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         self.view.addSubview(self.txtSearch)
-        self.txtSearch.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10).isActive = true
-        self.txtSearch.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10).isActive = true
+        self.txtSearch.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
+        self.txtSearch.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
         self.txtSearch.topAnchor.constraint(equalTo: self.lineView.bottomAnchor, constant: 10).isActive = true
         self.txtSearch.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
@@ -83,9 +114,9 @@ class LikesViewController: UIViewController, UICollectionViewDataSource, UIColle
         likeCollectionView.showsVerticalScrollIndicator = false
         likeCollectionView.register(UINib(nibName: "LikeDetails", bundle: nil), forCellWithReuseIdentifier: "LikeDetails")
         likeCollectionView.backgroundColor = .white
-        likeCollectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        likeCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        likeCollectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        likeCollectionView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        likeCollectionView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        likeCollectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         likeCollectionView.topAnchor.constraint(equalTo: self.txtSearch.bottomAnchor, constant: 10).isActive = true
     }
     

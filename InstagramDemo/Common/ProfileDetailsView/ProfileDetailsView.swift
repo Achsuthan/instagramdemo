@@ -49,6 +49,13 @@ class ProfileDetailsView: UIView, UICollectionViewDelegate, UICollectionViewData
         return button
     }()
     
+    let underLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setUp()
@@ -233,10 +240,76 @@ class ProfileDetailsView: UIView, UICollectionViewDelegate, UICollectionViewData
         heiglightsCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         heiglightsCollectionView.topAnchor.constraint(equalTo: btEditProfile.bottomAnchor, constant: 10).isActive = true
         heiglightsCollectionView.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        let bottomConstant = heiglightsCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        bottomConstant.isActive = true
         heiglightsCollectionView.backgroundColor = .white
         
+        //LineView
+        let lineView  = UIView()
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(lineView)
+        lineView.topAnchor.constraint(equalTo: heiglightsCollectionView.bottomAnchor, constant: 10).isActive = true
+        lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        lineView.backgroundColor = .lightGray
+        
+        //OptionView
+        let postsView = UIView()
+        postsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let tagsView = UIView()
+        tagsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let stackView2 = UIStackView(arrangedSubviews: [postsView, tagsView])
+        stackView2.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(stackView2)
+        stackView2.topAnchor.constraint(equalTo: lineView.bottomAnchor).isActive = true
+        stackView2.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        stackView2.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        stackView2.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        stackView2.distribution = .fillEqually
+        stackView2.axis = .horizontal
+        
+        
+        //postsImageView
+        let postsImageView  = UIImageView()
+        postsImageView.translatesAutoresizingMaskIntoConstraints = false
+        postsView.addSubview(postsImageView)
+        postsImageView.backgroundColor = .lightGray
+        postsImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        postsImageView.widthAnchor.constraint(equalToConstant: 40).isActive  = true
+        postsImageView.topAnchor.constraint(equalTo: postsView.topAnchor, constant: 5).isActive = true
+        postsImageView.centerXAnchor.constraint(equalTo: postsView.centerXAnchor).isActive = true
+        
+        
+        
+        //tagsImageView
+        let tagsImageView  = UIImageView()
+        tagsImageView.translatesAutoresizingMaskIntoConstraints = false
+        tagsView.addSubview(tagsImageView)
+        tagsImageView.backgroundColor = .lightGray
+        tagsImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        tagsImageView.widthAnchor.constraint(equalToConstant: 40).isActive  = true
+        tagsImageView.topAnchor.constraint(equalTo: tagsView.topAnchor, constant: 5).isActive = true
+        tagsImageView.centerXAnchor.constraint(equalTo: tagsView.centerXAnchor).isActive = true
+        
+        //LineView
+        let lineView2  = UIView()
+        lineView2.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(lineView2)
+        lineView2.topAnchor.constraint(equalTo: stackView2.bottomAnchor, constant: 0).isActive = true
+        lineView2.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        lineView2.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        lineView2.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        lineView2.backgroundColor = .lightGray
+        
+        let bottomConstant = lineView2.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        bottomConstant.isActive = true
+        
+        self.addSubview(self.underLineView)
+        self.underLineView.topAnchor.constraint(equalTo: stackView2.bottomAnchor).isActive = true
+        self.underLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        self.underLineView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.underLineView.widthAnchor.constraint(equalTo: stackView2.widthAnchor, multiplier: 0.5).isActive = true
     }
     
     @IBAction func btUrlAction(_: Any){
